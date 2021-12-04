@@ -7,7 +7,9 @@ import CateGory from '@/views/cateGory.vue';
 import Detail from '@/views/Detail.vue';
 
 Vue.use(VueRouter);
-
+// const haizi = {
+//   path: '',
+// };
 const routes = [
   {
     path: '/',
@@ -29,6 +31,7 @@ const routes = [
     path: '/detail',
     component: Detail,
     name: 'detail',
+    // children: haizi,
   },
 ];
 
