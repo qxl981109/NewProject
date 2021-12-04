@@ -1,39 +1,37 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Home from '@/views/Home.vue';
+import Cart from '@/views/Cart.vue';
+import UserInfo from '@/views/UserInfo.vue';
+import CateGory from '@/views/cateGory.vue';
+import Detail from '@/views/Detail.vue';
 
 Vue.use(VueRouter);
-
-const Home = () => import('@/views/Home.vue');
-const Cart = () => import('@/views/Cart.vue');
-const UserInfo = () => import('@/views/UserInfo.vue');
-const CateGory = () => import('@/views/cateGory.vue');
-const Detail = () => import('@/views/Detail.vue');
 
 const routes = [
   {
     path: '/',
     component: Home,
+    name: 'home',
   }, {
     path: '/cart',
     component: Cart,
+    name: 'cart',
   }, {
     path: '/userinfo',
     component: UserInfo,
+    name: 'userinfo',
   }, {
     path: '/category',
     component: CateGory,
+    name: 'category',
   }, {
     path: '/detail',
     component: Detail,
+    name: 'detail',
   },
 ];
 
 const router = new VueRouter({ routes });
-
-// 每次路由跳转，都把滚动条拉到最顶。
-router.beforeEach((to, from, next) => {
-  document.documentElement.scrollTop = 0;
-  next();
-});
 
 export default router;
