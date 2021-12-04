@@ -1,6 +1,6 @@
 <template>
   <div id='Cart'>
-    <div class='top-bar'>购物车(3)</div>
+    <div class='top-bar'>购物车</div>
   </div>
 </template>
 
@@ -8,9 +8,9 @@
 export default {
   data() {
     return {
-  }
-}
-}
+    };
+  },
+};
 </script>
 
 <style lang='less' scoped>
